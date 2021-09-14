@@ -1,1 +1,14 @@
+# Name of website
+title: in2cloud DSL documentation
+
+# Your name to show in the footer
+author: in2cloud
+
 theme: jekyll-theme-slate
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled:     true
+  collections: true
