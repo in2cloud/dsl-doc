@@ -1,3 +1,5 @@
+plugins:
+  - "jekyll-relative-links", :git => "https://github.com/benbalter/jekyll-relative-links.git", :ref => "c00abd291eb161f9627724c9941d4937c47a9864"
 
 relative_links:
   enabled: true
