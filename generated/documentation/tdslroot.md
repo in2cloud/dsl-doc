@@ -64,7 +64,7 @@ Blocks defining flow logic
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-blocks.md "in2cloud#/definitions/TFlow/properties/blocks")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-blocks.md)
 
 #### blocks Type
 
