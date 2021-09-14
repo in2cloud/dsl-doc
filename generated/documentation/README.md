@@ -2,7 +2,7 @@
 
 ## Top-level Schemas
 
-*   [in2cloud DSL](tdslroot.md "in2cloud DSL root object") – `in2cloud`
+*   [in2cloud DSL](./tdslroot.md "in2cloud DSL root object") – `in2cloud`
 
 ## Other Schemas
 
