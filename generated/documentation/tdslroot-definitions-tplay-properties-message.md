@@ -4,7 +4,7 @@
 in2cloud#/definitions/TPlay/properties/message
 ```
 
-Message to play
+Prompt to play
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |

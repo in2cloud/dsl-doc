@@ -24,7 +24,7 @@ Play message to a user
 
 ## message
 
-Message to play
+Prompt to play
 
 `message`
 

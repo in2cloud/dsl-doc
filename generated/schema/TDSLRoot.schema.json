@@ -50,7 +50,7 @@
             "description": "Play message to a user",
             "properties": {
                 "message": {
-                    "description": "Message to play",
+                    "description": "Prompt to play",
                     "title": "message",
                     "type": "string"
                 },

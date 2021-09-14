@@ -144,7 +144,7 @@ Reference this group by using
 
 ### message
 
-Message to play
+Prompt to play
 
 `message`
 
