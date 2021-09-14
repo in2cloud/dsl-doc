@@ -4,3 +4,10 @@ relative_links:
   collections: true
 
 theme: jekyll-theme-tactile
+
+defaults:
+  -
+    scope:
+      path: "generated/documentation/*.md"
+    values:
+      layout: "default"
