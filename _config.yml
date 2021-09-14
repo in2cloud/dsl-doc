@@ -10,3 +10,5 @@ defaults:
     values:
       layout: "default"
       title: "title"
+
+theme: jekyll-theme-tactile
