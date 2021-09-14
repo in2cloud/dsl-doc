@@ -8,6 +8,6 @@ theme: jekyll-theme-tactile
 defaults:
   -
     scope:
-      path: "generated/documentation/*.md"
+      path: "**/*.md"
     values:
-      layout: "default"
+      title: "default"
