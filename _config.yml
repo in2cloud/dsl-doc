@@ -4,10 +4,3 @@ relative_links:
   collections: true
 
 theme: jekyll-theme-tactile
-
-defaults:
-  -
-    scope:
-      path: "**/*.md"
-    values:
-      title: "default"
