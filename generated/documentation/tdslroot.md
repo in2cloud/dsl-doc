@@ -162,7 +162,7 @@ Message to play
 
 ### next
 
-Next block to be executed
+Next block to be executed after message will be played
 
 `next`
 
