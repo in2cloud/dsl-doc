@@ -1,7 +1,3 @@
----
-title: Document Center
----
-
 # README
 
 ## Top-level Schemas
