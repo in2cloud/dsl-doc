@@ -1,0 +1,90 @@
+{
+    "$id": "in2cloud",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "TFlow": {
+            "description": "Flow definition",
+            "properties": {
+                "blocks": {
+                    "description": "Blocks defining flow logic",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "in2cloud#/definitions/TPlay"
+                            },
+                            {
+                                "$ref": "in2cloud#/definitions/TMenu"
+                            }
+                        ],
+                        "description": "All possible block types"
+                    },
+                    "title": "blocks",
+                    "type": "array"
+                }
+            },
+            "title": "TFlow",
+            "type": "object"
+        },
+        "TMenu": {
+            "description": "Prompt user to make a choice",
+            "properties": {
+                "message": {
+                    "description": "Prompt to play to offer choices",
+                    "title": "message",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Type of the block.",
+                    "enum": [
+                        "TMenu",
+                        "TPlay"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "title": "TMenu",
+            "type": "object"
+        },
+        "TPlay": {
+            "description": "Play message to a user",
+            "properties": {
+                "message": {
+                    "description": "Message to play",
+                    "title": "message",
+                    "type": "string"
+                },
+                "next": {
+                    "description": "Next block to be executed after message will be played",
+                    "title": "next",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Type of the block.",
+                    "enum": [
+                        "TMenu",
+                        "TPlay"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "title": "TPlay",
+            "type": "object"
+        }
+    },
+    "description": "in2cloud DSL root object",
+    "properties": {
+        "flows": {
+            "description": "Flows definition",
+            "items": {
+                "$ref": "in2cloud#/definitions/TFlow"
+            },
+            "title": "flows",
+            "type": "array"
+        }
+    },
+    "title": "in2cloud DSL",
+    "type": "object"
+}
+
