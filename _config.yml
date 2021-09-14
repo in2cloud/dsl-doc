@@ -1,6 +1,6 @@
 
 relative_links:
-  enabled: false
+  enabled: true
   collections: true
 
 
