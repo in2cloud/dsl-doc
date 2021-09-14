@@ -54,6 +54,11 @@
                     "title": "message",
                     "type": "string"
                 },
+                "next": {
+                    "description": "Next block to be executed",
+                    "title": "next",
+                    "type": "string"
+                },
                 "type": {
                     "description": "Type of the block.",
                     "enum": [

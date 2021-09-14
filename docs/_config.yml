@@ -1,9 +1,0 @@
-# Your name to show in the footer
-author: in2cloud
-
-theme: jekyll-theme-slate
-
-plugins:
-  - jekyll-relative-links
-
-

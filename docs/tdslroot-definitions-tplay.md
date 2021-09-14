@@ -19,6 +19,7 @@ Play message to a user
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
 | :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
 | [message](#message) | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-message.md "in2cloud#/definitions/TPlay/properties/message") |
+| [next](#next)       | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-next.md "in2cloud#/definitions/TPlay/properties/next")       |
 | [type](#type)       | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-type.md "in2cloud#/definitions/TPlay/properties/type")       |
 
 ## message
@@ -38,6 +39,24 @@ Message to play
 ### message Type
 
 `string` ([message](tdslroot-definitions-tplay-properties-message.md))
+
+## next
+
+Next block to be executed
+
+`next`
+
+*   is optional
+
+*   Type: `string` ([next](tdslroot-definitions-tplay-properties-next.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-next.md "in2cloud#/definitions/TPlay/properties/next")
+
+### next Type
+
+`string` ([next](tdslroot-definitions-tplay-properties-next.md))
 
 ## type
 
