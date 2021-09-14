@@ -6,3 +6,7 @@ author: in2cloud
 
 plugins:
   - jekyll-relative-links
+
+relative_links:
+  enabled:     true
+  collections: true
