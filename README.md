@@ -1,3 +1,3 @@
 ### in2cloud DSL
 
-Schema definition is [here](./_posts/documentation/README.md)
+Schema definition is [here](./generated/documentation/README.md)
