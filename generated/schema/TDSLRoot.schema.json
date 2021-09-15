@@ -55,7 +55,7 @@
                     "type": "string"
                 },
                 "next": {
-                    "description": "Next block to be executed after message will be played",
+                    "description": "Next block to be executed after message will be played.",
                     "title": "next",
                     "type": "string"
                 },

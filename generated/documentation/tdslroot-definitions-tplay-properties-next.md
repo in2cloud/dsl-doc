@@ -4,7 +4,7 @@
 in2cloud#/definitions/TPlay/properties/next
 ```
 
-Next block to be executed after message will be played
+Next block to be executed after message will be played.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |

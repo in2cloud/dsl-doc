@@ -162,7 +162,7 @@ Prompt to play
 
 ### next
 
-Next block to be executed after message will be played
+Next block to be executed after message will be played.
 
 `next`
 
