@@ -1,7 +1,7 @@
 # type Schema
 
 ```txt
-in2cloud#/definitions/TPlay/properties/type
+in2cloud#/definitions/TDisconnect/properties/type
 ```
 
 
@@ -12,12 +12,12 @@ in2cloud#/definitions/TPlay/properties/type
 
 ## type Type
 
-`string` ([type](tdslroot-definitions-tplay-properties-type.md))
+`string` ([type](tdslroot-definitions-tdisconnect-properties-type.md))
 
 ## type Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value     | Explanation |
-| :-------- | :---------- |
-| `"TPlay"` |             |
+| Value           | Explanation |
+| :-------------- | :---------- |
+| `"TDisconnect"` |             |

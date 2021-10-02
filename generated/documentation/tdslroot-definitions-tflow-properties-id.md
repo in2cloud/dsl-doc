@@ -1,15 +1,15 @@
-# blocks Schema
+# id Schema
 
 ```txt
-in2cloud#/definitions/TFlow/properties/blocks
+in2cloud#/definitions/TFlow/properties/id
 ```
 
-Blocks defining flow logic
+Flow unique identifier
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## blocks Type
+## id Type
 
-an array of merged types ([Details](tdslroot-definitions-tflow-properties-blocks-items.md))
+`string` ([id](tdslroot-definitions-tflow-properties-id.md))

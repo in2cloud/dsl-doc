@@ -1,21 +1,23 @@
-# Untitled undefined type in in2cloud DSL Schema
+# type Schema
 
 ```txt
-in2cloud#/definitions/TFlow/properties/blocks/items
+in2cloud#/definitions/TCall/properties/type
 ```
 
-All possible block types
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## items Type
+## type Type
 
-merged type ([Details](tdslroot-definitions-tflow-properties-blocks-items.md))
+`string` ([type](tdslroot-definitions-tcall-properties-type.md))
 
-any of
+## type Constraints
 
-*   [TPlay](tdslroot-definitions-tplay.md "check type definition")
+**enum**: the value of this property must be equal to one of the following values:
 
-*   [TMenu](tdslroot-definitions-tmenu.md "check type definition")
+| Value     | Explanation |
+| :-------- | :---------- |
+| `"TCall"` |             |

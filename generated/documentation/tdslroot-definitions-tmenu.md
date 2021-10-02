@@ -1,14 +1,14 @@
 # TMenu Schema
 
 ```txt
-in2cloud#/definitions/TFlow/properties/blocks/items/anyOf/1
+in2cloud#/definitions/TBlocks/additionalProperties/anyOf/1
 ```
 
 Prompt user to make a choice
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
 ## 1 Type
 
@@ -18,8 +18,8 @@ Prompt user to make a choice
 
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
 | :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [message](#message) | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-message.md "in2cloud#/definitions/TMenu/properties/message") |
-| [type](#type)       | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-type.md "in2cloud#/definitions/TMenu/properties/type")       |
+| [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-message.md "in2cloud#/definitions/TMenu/properties/message") |
+| [type](#type)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-type.md "in2cloud#/definitions/TMenu/properties/type")       |
 
 ## message
 
@@ -27,7 +27,7 @@ Prompt to play to offer choices
 
 `message`
 
-*   is optional
+*   is required
 
 *   Type: `string` ([message](tdslroot-definitions-tmenu-properties-message.md))
 
@@ -41,11 +41,11 @@ Prompt to play to offer choices
 
 ## type
 
-Type of the block.
+
 
 `type`
 
-*   is optional
+*   is required
 
 *   Type: `string` ([type](tdslroot-definitions-tmenu-properties-type.md))
 
@@ -64,4 +64,3 @@ Type of the block.
 | Value     | Explanation |
 | :-------- | :---------- |
 | `"TMenu"` |             |
-| `"TPlay"` |             |

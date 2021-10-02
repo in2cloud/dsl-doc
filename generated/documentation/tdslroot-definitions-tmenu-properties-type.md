@@ -4,7 +4,7 @@
 in2cloud#/definitions/TMenu/properties/type
 ```
 
-Type of the block.
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
@@ -21,4 +21,3 @@ Type of the block.
 | Value     | Explanation |
 | :-------- | :---------- |
 | `"TMenu"` |             |
-| `"TPlay"` |             |

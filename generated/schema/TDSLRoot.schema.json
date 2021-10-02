@@ -1,31 +1,104 @@
 {
     "$id": "in2cloud",
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
     "definitions": {
+        "TBlocks": {
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "$ref": "in2cloud#/definitions/TPlay"
+                    },
+                    {
+                        "$ref": "in2cloud#/definitions/TMenu"
+                    },
+                    {
+                        "$ref": "in2cloud#/definitions/TDisconnect"
+                    },
+                    {
+                        "$ref": "in2cloud#/definitions/TCall"
+                    },
+                    {
+                        "$ref": "in2cloud#/definitions/TPrompt"
+                    },
+                    {
+                        "$ref": "in2cloud#/definitions/TToTeam"
+                    },
+                    {
+                        "$ref": "in2cloud#/definitions/TReturn"
+                    }
+                ]
+            },
+            "description": "Map of flow blocks",
+            "title": "TBlocks",
+            "type": "object"
+        },
+        "TCall": {
+            "additionalProperties": false,
+            "description": "Invoke other sub-flow defined in this DSL file",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "TCall"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "TCall",
+            "type": "object"
+        },
+        "TDisconnect": {
+            "additionalProperties": false,
+            "description": "Finish flow and disconnect user",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "TDisconnect"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "TDisconnect",
+            "type": "object"
+        },
         "TFlow": {
+            "additionalProperties": false,
             "description": "Flow definition",
             "properties": {
                 "blocks": {
-                    "description": "Blocks defining flow logic",
-                    "items": {
-                        "anyOf": [
-                            {
-                                "$ref": "in2cloud#/definitions/TPlay"
-                            },
-                            {
-                                "$ref": "in2cloud#/definitions/TMenu"
-                            }
-                        ],
-                        "description": "All possible block types"
-                    },
-                    "title": "blocks",
-                    "type": "array"
+                    "$ref": "in2cloud#/definitions/TBlocks",
+                    "description": "Blocks defining flow steps",
+                    "title": "blocks"
+                },
+                "id": {
+                    "description": "Flow unique identifier",
+                    "title": "id",
+                    "type": "string"
+                },
+                "initial": {
+                    "description": "ID of initial block in this flow",
+                    "title": "initial",
+                    "type": "string"
                 }
             },
+            "required": [
+                "blocks",
+                "id",
+                "initial"
+            ],
             "title": "TFlow",
             "type": "object"
         },
         "TMenu": {
+            "additionalProperties": false,
             "description": "Prompt user to make a choice",
             "properties": {
                 "message": {
@@ -34,20 +107,22 @@
                     "type": "string"
                 },
                 "type": {
-                    "description": "Type of the block.",
                     "enum": [
-                        "TMenu",
-                        "TPlay"
+                        "TMenu"
                     ],
                     "title": "type",
                     "type": "string"
                 }
             },
+            "required": [
+                "message",
+                "type"
+            ],
             "title": "TMenu",
             "type": "object"
         },
         "TPlay": {
-            "description": "Play message to a user",
+            "additionalProperties": false,
             "properties": {
                 "message": {
                     "description": "Prompt to play",
@@ -60,16 +135,95 @@
                     "type": "string"
                 },
                 "type": {
-                    "description": "Type of the block.",
                     "enum": [
-                        "TMenu",
                         "TPlay"
                     ],
                     "title": "type",
                     "type": "string"
                 }
             },
+            "required": [
+                "message",
+                "next",
+                "type"
+            ],
             "title": "TPlay",
+            "type": "object"
+        },
+        "TPrompt": {
+            "additionalProperties": false,
+            "description": "Prompt user for input",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "TPrompt"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "TPrompt",
+            "type": "object"
+        },
+        "TProvided": {
+            "additionalProperties": false,
+            "description": "Sub-flow avaliable to be invoked with TCall, but not defined in this DSL",
+            "properties": {
+                "id": {
+                    "description": "Flow unique id",
+                    "title": "id",
+                    "type": "string"
+                },
+                "resource": {
+                    "description": "System specific unique resource locator",
+                    "title": "resource",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "resource"
+            ],
+            "title": "TProvided",
+            "type": "object"
+        },
+        "TReturn": {
+            "additionalProperties": false,
+            "description": "Return from subflow to a parent flow",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "TReturn"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "TReturn",
+            "type": "object"
+        },
+        "TToTeam": {
+            "additionalProperties": false,
+            "description": "Transfer user to a specified team",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "TToTeam"
+                    ],
+                    "title": "type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "TToTeam",
             "type": "object"
         }
     },
@@ -82,8 +236,20 @@
             },
             "title": "flows",
             "type": "array"
+        },
+        "provided": {
+            "description": "List of @TProvided sub-flows",
+            "items": {
+                "$ref": "in2cloud#/definitions/TProvided"
+            },
+            "title": "provided",
+            "type": "array"
         }
     },
+    "required": [
+        "flows",
+        "provided"
+    ],
     "title": "in2cloud DSL",
     "type": "object"
 }
