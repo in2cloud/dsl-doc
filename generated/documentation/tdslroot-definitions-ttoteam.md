@@ -16,48 +16,72 @@ Transfer user to a specified team
 
 # 5 Properties
 
-| Property        | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :-------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [busy](#busy)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")   |
-| [error](#error) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error") |
-| [team](#team)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")   |
-| [type](#type)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type")   |
+| Property        | Type     | Required | Nullable       | Defined by                                                                                                      |
+| :-------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
+| [busy](#busy)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TToTeam/properties/busy")                |
+| [error](#error) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TToTeam/properties/error")               |
+| [team](#team)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team") |
+| [type](#type)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type") |
 
 ## busy
 
-Block to be executed in case all team members are busy
+Uniquely defines block
 
 `busy`
 
 *   is required
 
-*   Type: `string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TToTeam/properties/busy")
 
 ### busy Type
 
-`string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### busy Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## error
 
-Block to be executed in case of transfer error
+Uniquely defines block
 
 `error`
 
 *   is required
 
-*   Type: `string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TToTeam/properties/error")
 
 ### error Type
 
-`string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### error Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## team
 

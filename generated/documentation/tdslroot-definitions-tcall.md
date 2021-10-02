@@ -18,28 +18,40 @@ Invoke other sub-flow defined in this DSL file
 
 | Property                  | Type     | Required | Nullable       | Defined by                                                                                                              |
 | :------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [callError](#callerror)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-callerror.md "in2cloud#/definitions/TCall/properties/callError")   |
+| [callError](#callerror)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TCall/properties/callError")                     |
 | [collection](#collection) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-collection.md "in2cloud#/definitions/TCall/properties/collection") |
 | [type](#type)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-type.md "in2cloud#/definitions/TCall/properties/type")             |
 | Additional Properties     | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-additionalproperties.md "in2cloud#/definitions/TCall/additionalProperties")   |
 
 ## callError
 
-Block to be executed in case of sub-flow call error
+Uniquely defines block
 
 `callError`
 
 *   is required
 
-*   Type: `string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tcall-properties-callerror.md "in2cloud#/definitions/TCall/properties/callError")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TCall/properties/callError")
 
 ### callError Type
 
-`string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### callError Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## collection
 

@@ -21,7 +21,7 @@ Flow definition
 | [blocks](#blocks)         | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblocks.md "in2cloud#/definitions/TFlow/properties/blocks")                         |
 | [exits](#exits)           | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-exits.md "in2cloud#/definitions/TFlow/properties/exits")           |
 | [id](#id)                 | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-id.md "in2cloud#/definitions/TFlow/properties/id")                 |
-| [initial](#initial)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial")       |
+| [initial](#initial)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TFlow/properties/initial")                       |
 | [parameters](#parameters) | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-parameters.md "in2cloud#/definitions/TFlow/properties/parameters") |
 
 ## blocks
@@ -80,21 +80,33 @@ Flow unique identifier
 
 ## initial
 
-ID of initial block in this flow
+Uniquely defines block
 
 `initial`
 
 *   is required
 
-*   Type: `string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TFlow/properties/initial")
 
 ### initial Type
 
-`string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### initial Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## parameters
 

@@ -1,15 +1,15 @@
-# error Schema
+# TInput Schema
 
 ```txt
-in2cloud#/definitions/TToTeam/properties/error
+in2cloud#/definitions/TPlay/properties/message
 ```
 
-Block to be executed in case of transfer error
+Value or value reference
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## error Type
+## message Type
 
-`string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+`string` ([TInput](tdslroot-definitions-tplay-properties-tinput.md))

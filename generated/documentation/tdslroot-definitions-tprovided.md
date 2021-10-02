@@ -18,26 +18,38 @@ Sub-flow avaliable to be invoked with TCall, but not defined in this DSL
 
 | Property              | Type     | Required | Nullable       | Defined by                                                                                                                  |
 | :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprovided-properties-id.md "in2cloud#/definitions/TProvided/properties/id")             |
+| [id](#id)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TProvided/properties/id")                            |
 | [resource](#resource) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprovided-properties-resource.md "in2cloud#/definitions/TProvided/properties/resource") |
 
 ## id
 
-Flow unique id
+Uniquely defines block
 
 `id`
 
 *   is required
 
-*   Type: `string` ([id](tdslroot-definitions-tprovided-properties-id.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprovided-properties-id.md "in2cloud#/definitions/TProvided/properties/id")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TProvided/properties/id")
 
 ### id Type
 
-`string` ([id](tdslroot-definitions-tprovided-properties-id.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### id Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## resource
 

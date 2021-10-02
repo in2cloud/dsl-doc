@@ -59,6 +59,17 @@ List of @TProvided sub-flows
 
 # in2cloud DSL Definitions
 
+## Definitions group TBlockID
+
+Reference this group by using
+
+```json
+{"$ref":"in2cloud#/definitions/TBlockID"}
+```
+
+| Property | Type | Required | Nullable | Defined by |
+| :------- | :--- | :------- | :------- | :--------- |
+
 ## Definitions group TBlocks
 
 Reference this group by using
@@ -115,28 +126,40 @@ Reference this group by using
 
 | Property                  | Type     | Required | Nullable       | Defined by                                                                                                              |
 | :------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [callError](#callerror)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-callerror.md "in2cloud#/definitions/TCall/properties/callError")   |
+| [callError](#callerror)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-tblockid.md "in2cloud#/definitions/TCall/properties/callError")    |
 | [collection](#collection) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-collection.md "in2cloud#/definitions/TCall/properties/collection") |
 | [type](#type)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-type.md "in2cloud#/definitions/TCall/properties/type")             |
 | Additional Properties     | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-additionalproperties.md "in2cloud#/definitions/TCall/additionalProperties")   |
 
 ### callError
 
-Block to be executed in case of sub-flow call error
+Uniquely defines block
 
 `callError`
 
 *   is required
 
-*   Type: `string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tcall-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tcall-properties-callerror.md "in2cloud#/definitions/TCall/properties/callError")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tcall-properties-tblockid.md "in2cloud#/definitions/TCall/properties/callError")
 
 #### callError Type
 
-`string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+`string` ([TBlockID](tdslroot-definitions-tcall-properties-tblockid.md))
+
+#### callError Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### collection
 
@@ -251,7 +274,7 @@ Reference this group by using
 | [blocks](#blocks)         | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblocks.md "in2cloud#/definitions/TFlow/properties/blocks")                         |
 | [exits](#exits)           | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-exits.md "in2cloud#/definitions/TFlow/properties/exits")           |
 | [id](#id)                 | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-id.md "in2cloud#/definitions/TFlow/properties/id")                 |
-| [initial](#initial)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial")       |
+| [initial](#initial)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-tblockid.md "in2cloud#/definitions/TFlow/properties/initial")      |
 | [parameters](#parameters) | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-parameters.md "in2cloud#/definitions/TFlow/properties/parameters") |
 
 ### blocks
@@ -310,21 +333,33 @@ Flow unique identifier
 
 ### initial
 
-ID of initial block in this flow
+Uniquely defines block
 
 `initial`
 
 *   is required
 
-*   Type: `string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tflow-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-tblockid.md "in2cloud#/definitions/TFlow/properties/initial")
 
 #### initial Type
 
-`string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
+`string` ([TBlockID](tdslroot-definitions-tflow-properties-tblockid.md))
+
+#### initial Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### parameters
 
@@ -344,6 +379,17 @@ List of parameters required for this flow to run
 
 `string[]`
 
+## Definitions group TInput
+
+Reference this group by using
+
+```json
+{"$ref":"in2cloud#/definitions/TInput"}
+```
+
+| Property | Type | Required | Nullable | Defined by |
+| :------- | :--- | :------- | :------- | :--------- |
+
 ## Definitions group TMenu
 
 Reference this group by using
@@ -352,32 +398,44 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TMenu"}
 ```
 
-| Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [error](#error)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-error.md "in2cloud#/definitions/TMenu/properties/error")     |
-| [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-message.md "in2cloud#/definitions/TMenu/properties/message") |
-| [nomatch](#nomatch) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-nomatch.md "in2cloud#/definitions/TMenu/properties/nomatch") |
-| [options](#options) | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenuoptions.md "in2cloud#/definitions/TMenu/properties/options")             |
-| [timeout](#timeout) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-timeout.md "in2cloud#/definitions/TMenu/properties/timeout") |
-| [type](#type-2)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-type.md "in2cloud#/definitions/TMenu/properties/type")       |
+| Property            | Type     | Required | Nullable       | Defined by                                                                                                           |
+| :------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------- |
+| [error](#error)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-tblockid.md "in2cloud#/definitions/TMenu/properties/error")     |
+| [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-message.md "in2cloud#/definitions/TMenu/properties/message")    |
+| [nomatch](#nomatch) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-tblockid-1.md "in2cloud#/definitions/TMenu/properties/nomatch") |
+| [options](#options) | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenuoptions.md "in2cloud#/definitions/TMenu/properties/options")                |
+| [timeout](#timeout) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-tblockid-2.md "in2cloud#/definitions/TMenu/properties/timeout") |
+| [type](#type-2)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-type.md "in2cloud#/definitions/TMenu/properties/type")          |
 
 ### error
 
-Block to be executed in case of error
+Uniquely defines block
 
 `error`
 
 *   is required
 
-*   Type: `string` ([error](tdslroot-definitions-tmenu-properties-error.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tmenu-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-error.md "in2cloud#/definitions/TMenu/properties/error")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-tblockid.md "in2cloud#/definitions/TMenu/properties/error")
 
 #### error Type
 
-`string` ([error](tdslroot-definitions-tmenu-properties-error.md))
+`string` ([TBlockID](tdslroot-definitions-tmenu-properties-tblockid.md))
+
+#### error Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### message
 
@@ -399,21 +457,33 @@ Prompt to play to offer choices
 
 ### nomatch
 
-Block to be executed in case of mismatching option
+Uniquely defines block
 
 `nomatch`
 
 *   is required
 
-*   Type: `string` ([nomatch](tdslroot-definitions-tmenu-properties-nomatch.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tmenu-properties-tblockid-1.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-nomatch.md "in2cloud#/definitions/TMenu/properties/nomatch")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-tblockid-1.md "in2cloud#/definitions/TMenu/properties/nomatch")
 
 #### nomatch Type
 
-`string` ([nomatch](tdslroot-definitions-tmenu-properties-nomatch.md))
+`string` ([TBlockID](tdslroot-definitions-tmenu-properties-tblockid-1.md))
+
+#### nomatch Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### options
 
@@ -435,21 +505,33 @@ Mapping of option to a block id
 
 ### timeout
 
-Block to be executed in case of no option provided
+Uniquely defines block
 
 `timeout`
 
 *   is required
 
-*   Type: `string` ([timeout](tdslroot-definitions-tmenu-properties-timeout.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tmenu-properties-tblockid-2.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-timeout.md "in2cloud#/definitions/TMenu/properties/timeout")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-tblockid-2.md "in2cloud#/definitions/TMenu/properties/timeout")
 
 #### timeout Type
 
-`string` ([timeout](tdslroot-definitions-tmenu-properties-timeout.md))
+`string` ([TBlockID](tdslroot-definitions-tmenu-properties-tblockid-2.md))
+
+#### timeout Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### type
 
@@ -507,6 +589,17 @@ Additional properties are allowed, as long as they follow this schema:
 
 `string`
 
+## Definitions group TOutput
+
+Reference this group by using
+
+```json
+{"$ref":"in2cloud#/definitions/TOutput"}
+```
+
+| Property | Type | Required | Nullable | Defined by |
+| :------- | :--- | :------- | :------- | :--------- |
+
 ## Definitions group TPlay
 
 Reference this group by using
@@ -515,47 +608,59 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TPlay"}
 ```
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [message](#message-1) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-message.md "in2cloud#/definitions/TPlay/properties/message") |
-| [next](#next)         | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-next.md "in2cloud#/definitions/TPlay/properties/next")       |
-| [type](#type-3)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-type.md "in2cloud#/definitions/TPlay/properties/type")       |
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                       |
+| :-------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------- |
+| [message](#message-1) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-tinput.md "in2cloud#/definitions/TPlay/properties/message") |
+| [next](#next)         | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-tblockid.md "in2cloud#/definitions/TPlay/properties/next")  |
+| [type](#type-3)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-type.md "in2cloud#/definitions/TPlay/properties/type")      |
 
 ### message
 
-Prompt to play
+Value or value reference
 
 `message`
 
 *   is required
 
-*   Type: `string` ([message](tdslroot-definitions-tplay-properties-message.md))
+*   Type: `string` ([TInput](tdslroot-definitions-tplay-properties-tinput.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-message.md "in2cloud#/definitions/TPlay/properties/message")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-tinput.md "in2cloud#/definitions/TPlay/properties/message")
 
 #### message Type
 
-`string` ([message](tdslroot-definitions-tplay-properties-message.md))
+`string` ([TInput](tdslroot-definitions-tplay-properties-tinput.md))
 
 ### next
 
-Next block to be executed after message will be played
+Uniquely defines block
 
 `next`
 
 *   is required
 
-*   Type: `string` ([next](tdslroot-definitions-tplay-properties-next.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tplay-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-next.md "in2cloud#/definitions/TPlay/properties/next")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-tblockid.md "in2cloud#/definitions/TPlay/properties/next")
 
 #### next Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string` ([TBlockID](tdslroot-definitions-tplay-properties-tblockid.md))
+
+#### next Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### type
 
@@ -591,104 +696,152 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TPrompt"}
 ```
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                    |
-| :-------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| [destination](#destination) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-destination.md "in2cloud#/definitions/TPrompt/properties/destination") |
-| [error](#error-1)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-error.md "in2cloud#/definitions/TPrompt/properties/error")             |
-| [message](#message-2)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-message.md "in2cloud#/definitions/TPrompt/properties/message")         |
-| [next](#next-1)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-next.md "in2cloud#/definitions/TPrompt/properties/next")               |
-| [timeout](#timeout-1)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-timeout.md "in2cloud#/definitions/TPrompt/properties/timeout")         |
-| [type](#type-4)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-type.md "in2cloud#/definitions/TPrompt/properties/type")               |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                |
+| :-------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| [destination](#destination) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-toutput.md "in2cloud#/definitions/TPrompt/properties/destination") |
+| [error](#error-1)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-tblockid.md "in2cloud#/definitions/TPrompt/properties/error")      |
+| [message](#message-2)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-tinput.md "in2cloud#/definitions/TPrompt/properties/message")      |
+| [next](#next-1)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-tblockid-1.md "in2cloud#/definitions/TPrompt/properties/next")     |
+| [timeout](#timeout-1)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-tblockid-2.md "in2cloud#/definitions/TPrompt/properties/timeout")  |
+| [type](#type-4)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-type.md "in2cloud#/definitions/TPrompt/properties/type")           |
 
 ### destination
 
-Variable name where user input will be stored
+Variable definition
 
 `destination`
 
 *   is required
 
-*   Type: `string` ([destination](tdslroot-definitions-tprompt-properties-destination.md))
+*   Type: `string` ([TOutput](tdslroot-definitions-tprompt-properties-toutput.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-destination.md "in2cloud#/definitions/TPrompt/properties/destination")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-toutput.md "in2cloud#/definitions/TPrompt/properties/destination")
 
 #### destination Type
 
-`string` ([destination](tdslroot-definitions-tprompt-properties-destination.md))
+`string` ([TOutput](tdslroot-definitions-tprompt-properties-toutput.md))
+
+#### destination Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### error
 
-Block to be executed in case of error
+Uniquely defines block
 
 `error`
 
 *   is required
 
-*   Type: `string` ([error](tdslroot-definitions-tprompt-properties-error.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tprompt-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-error.md "in2cloud#/definitions/TPrompt/properties/error")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-tblockid.md "in2cloud#/definitions/TPrompt/properties/error")
 
 #### error Type
 
-`string` ([error](tdslroot-definitions-tprompt-properties-error.md))
+`string` ([TBlockID](tdslroot-definitions-tprompt-properties-tblockid.md))
+
+#### error Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### message
 
-Prompt to play
+Value or value reference
 
 `message`
 
 *   is required
 
-*   Type: `string` ([message](tdslroot-definitions-tprompt-properties-message.md))
+*   Type: `string` ([TInput](tdslroot-definitions-tprompt-properties-tinput.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-message.md "in2cloud#/definitions/TPrompt/properties/message")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-tinput.md "in2cloud#/definitions/TPrompt/properties/message")
 
 #### message Type
 
-`string` ([message](tdslroot-definitions-tprompt-properties-message.md))
+`string` ([TInput](tdslroot-definitions-tprompt-properties-tinput.md))
 
 ### next
 
-Next block to be executed after input will be provided
+Uniquely defines block
 
 `next`
 
 *   is required
 
-*   Type: `string` ([next](tdslroot-definitions-tprompt-properties-next.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tprompt-properties-tblockid-1.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-next.md "in2cloud#/definitions/TPrompt/properties/next")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-tblockid-1.md "in2cloud#/definitions/TPrompt/properties/next")
 
 #### next Type
 
-`string` ([next](tdslroot-definitions-tprompt-properties-next.md))
+`string` ([TBlockID](tdslroot-definitions-tprompt-properties-tblockid-1.md))
+
+#### next Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### timeout
 
-Block to be executed in case of no input provided
+Uniquely defines block
 
 `timeout`
 
 *   is required
 
-*   Type: `string` ([timeout](tdslroot-definitions-tprompt-properties-timeout.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tprompt-properties-tblockid-2.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-timeout.md "in2cloud#/definitions/TPrompt/properties/timeout")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-tblockid-2.md "in2cloud#/definitions/TPrompt/properties/timeout")
 
 #### timeout Type
 
-`string` ([timeout](tdslroot-definitions-tprompt-properties-timeout.md))
+`string` ([TBlockID](tdslroot-definitions-tprompt-properties-tblockid-2.md))
+
+#### timeout Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### type
 
@@ -726,26 +879,38 @@ Reference this group by using
 
 | Property              | Type     | Required | Nullable       | Defined by                                                                                                                  |
 | :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id-1)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprovided-properties-id.md "in2cloud#/definitions/TProvided/properties/id")             |
+| [id](#id-1)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprovided-properties-tblockid.md "in2cloud#/definitions/TProvided/properties/id")       |
 | [resource](#resource) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprovided-properties-resource.md "in2cloud#/definitions/TProvided/properties/resource") |
 
 ### id
 
-Flow unique id
+Uniquely defines block
 
 `id`
 
 *   is required
 
-*   Type: `string` ([id](tdslroot-definitions-tprovided-properties-id.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tprovided-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprovided-properties-id.md "in2cloud#/definitions/TProvided/properties/id")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprovided-properties-tblockid.md "in2cloud#/definitions/TProvided/properties/id")
 
 #### id Type
 
-`string` ([id](tdslroot-definitions-tprovided-properties-id.md))
+`string` ([TBlockID](tdslroot-definitions-tprovided-properties-tblockid.md))
+
+#### id Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### resource
 
@@ -830,48 +995,72 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TToTeam"}
 ```
 
-| Property          | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :---------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [busy](#busy)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")   |
-| [error](#error-2) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error") |
-| [team](#team)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")   |
-| [type](#type-6)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type")   |
+| Property          | Type     | Required | Nullable       | Defined by                                                                                                             |
+| :---------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------- |
+| [busy](#busy)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-tblockid.md "in2cloud#/definitions/TToTeam/properties/busy")    |
+| [error](#error-2) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-tblockid-1.md "in2cloud#/definitions/TToTeam/properties/error") |
+| [team](#team)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")        |
+| [type](#type-6)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type")        |
 
 ### busy
 
-Block to be executed in case all team members are busy
+Uniquely defines block
 
 `busy`
 
 *   is required
 
-*   Type: `string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-ttoteam-properties-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-tblockid.md "in2cloud#/definitions/TToTeam/properties/busy")
 
 #### busy Type
 
-`string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+`string` ([TBlockID](tdslroot-definitions-ttoteam-properties-tblockid.md))
+
+#### busy Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### error
 
-Block to be executed in case of transfer error
+Uniquely defines block
 
 `error`
 
 *   is required
 
-*   Type: `string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-ttoteam-properties-tblockid-1.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error")
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-tblockid-1.md "in2cloud#/definitions/TToTeam/properties/error")
 
 #### error Type
 
-`string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+`string` ([TBlockID](tdslroot-definitions-ttoteam-properties-tblockid-1.md))
+
+#### error Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ### team
 

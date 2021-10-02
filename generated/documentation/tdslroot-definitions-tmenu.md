@@ -18,30 +18,42 @@ Prompt user to make a choice
 
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
 | :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [error](#error)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-error.md "in2cloud#/definitions/TMenu/properties/error")     |
+| [error](#error)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TMenu/properties/error")                   |
 | [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-message.md "in2cloud#/definitions/TMenu/properties/message") |
-| [nomatch](#nomatch) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-nomatch.md "in2cloud#/definitions/TMenu/properties/nomatch") |
+| [nomatch](#nomatch) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TMenu/properties/nomatch")                 |
 | [options](#options) | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenuoptions.md "in2cloud#/definitions/TMenu/properties/options")             |
-| [timeout](#timeout) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-timeout.md "in2cloud#/definitions/TMenu/properties/timeout") |
+| [timeout](#timeout) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TMenu/properties/timeout")                 |
 | [type](#type)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-type.md "in2cloud#/definitions/TMenu/properties/type")       |
 
 ## error
 
-Block to be executed in case of error
+Uniquely defines block
 
 `error`
 
 *   is required
 
-*   Type: `string` ([error](tdslroot-definitions-tmenu-properties-error.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-error.md "in2cloud#/definitions/TMenu/properties/error")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TMenu/properties/error")
 
 ### error Type
 
-`string` ([error](tdslroot-definitions-tmenu-properties-error.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### error Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## message
 
@@ -63,21 +75,33 @@ Prompt to play to offer choices
 
 ## nomatch
 
-Block to be executed in case of mismatching option
+Uniquely defines block
 
 `nomatch`
 
 *   is required
 
-*   Type: `string` ([nomatch](tdslroot-definitions-tmenu-properties-nomatch.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-nomatch.md "in2cloud#/definitions/TMenu/properties/nomatch")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TMenu/properties/nomatch")
 
 ### nomatch Type
 
-`string` ([nomatch](tdslroot-definitions-tmenu-properties-nomatch.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### nomatch Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## options
 
@@ -99,21 +123,33 @@ Mapping of option to a block id
 
 ## timeout
 
-Block to be executed in case of no option provided
+Uniquely defines block
 
 `timeout`
 
 *   is required
 
-*   Type: `string` ([timeout](tdslroot-definitions-tmenu-properties-timeout.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-timeout.md "in2cloud#/definitions/TMenu/properties/timeout")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TMenu/properties/timeout")
 
 ### timeout Type
 
-`string` ([timeout](tdslroot-definitions-tmenu-properties-timeout.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### timeout Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## type
 

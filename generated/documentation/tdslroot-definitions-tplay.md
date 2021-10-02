@@ -16,47 +16,59 @@ Play message to a user
 
 # 0 Properties
 
-| Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-message.md "in2cloud#/definitions/TPlay/properties/message") |
-| [next](#next)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-next.md "in2cloud#/definitions/TPlay/properties/next")       |
-| [type](#type)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-type.md "in2cloud#/definitions/TPlay/properties/type")       |
+| Property            | Type     | Required | Nullable       | Defined by                                                                                                  |
+| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------- |
+| [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tinput.md "in2cloud#/definitions/TPlay/properties/message")             |
+| [next](#next)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPlay/properties/next")              |
+| [type](#type)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tplay-properties-type.md "in2cloud#/definitions/TPlay/properties/type") |
 
 ## message
 
-Prompt to play
+Value or value reference
 
 `message`
 
 *   is required
 
-*   Type: `string` ([message](tdslroot-definitions-tplay-properties-message.md))
+*   Type: `string` ([TInput](tdslroot-definitions-tinput.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-message.md "in2cloud#/definitions/TPlay/properties/message")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tinput.md "in2cloud#/definitions/TPlay/properties/message")
 
 ### message Type
 
-`string` ([message](tdslroot-definitions-tplay-properties-message.md))
+`string` ([TInput](tdslroot-definitions-tinput.md))
 
 ## next
 
-Next block to be executed after message will be played
+Uniquely defines block
 
 `next`
 
 *   is required
 
-*   Type: `string` ([next](tdslroot-definitions-tplay-properties-next.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tplay-properties-next.md "in2cloud#/definitions/TPlay/properties/next")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPlay/properties/next")
 
 ### next Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### next Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## type
 

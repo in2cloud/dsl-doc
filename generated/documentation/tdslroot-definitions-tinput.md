@@ -1,15 +1,15 @@
-# callError Schema
+# TInput Schema
 
 ```txt
-in2cloud#/definitions/TCall/properties/callError
+in2cloud#/definitions/TPrompt/properties/message
 ```
 
-Block to be executed in case of sub-flow call error
+Value or value reference
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## callError Type
+## message Type
 
-`string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+`string` ([TInput](tdslroot-definitions-tinput.md))

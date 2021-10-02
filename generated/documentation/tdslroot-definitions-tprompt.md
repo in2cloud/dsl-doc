@@ -16,104 +16,152 @@ Prompt user for input
 
 # 4 Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                    |
-| :-------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| [destination](#destination) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-destination.md "in2cloud#/definitions/TPrompt/properties/destination") |
-| [error](#error)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-error.md "in2cloud#/definitions/TPrompt/properties/error")             |
-| [message](#message)         | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-message.md "in2cloud#/definitions/TPrompt/properties/message")         |
-| [next](#next)               | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-next.md "in2cloud#/definitions/TPrompt/properties/next")               |
-| [timeout](#timeout)         | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-timeout.md "in2cloud#/definitions/TPrompt/properties/timeout")         |
-| [type](#type)               | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-type.md "in2cloud#/definitions/TPrompt/properties/type")               |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                      |
+| :-------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
+| [destination](#destination) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-toutput.md "in2cloud#/definitions/TPrompt/properties/destination")          |
+| [error](#error)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPrompt/properties/error")               |
+| [message](#message)         | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tinput.md "in2cloud#/definitions/TPrompt/properties/message")               |
+| [next](#next)               | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPrompt/properties/next")                |
+| [timeout](#timeout)         | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPrompt/properties/timeout")             |
+| [type](#type)               | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-type.md "in2cloud#/definitions/TPrompt/properties/type") |
 
 ## destination
 
-Variable name where user input will be stored
+Variable definition
 
 `destination`
 
 *   is required
 
-*   Type: `string` ([destination](tdslroot-definitions-tprompt-properties-destination.md))
+*   Type: `string` ([TOutput](tdslroot-definitions-toutput.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-destination.md "in2cloud#/definitions/TPrompt/properties/destination")
+*   defined in: [in2cloud DSL](tdslroot-definitions-toutput.md "in2cloud#/definitions/TPrompt/properties/destination")
 
 ### destination Type
 
-`string` ([destination](tdslroot-definitions-tprompt-properties-destination.md))
+`string` ([TOutput](tdslroot-definitions-toutput.md))
+
+### destination Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## error
 
-Block to be executed in case of error
+Uniquely defines block
 
 `error`
 
 *   is required
 
-*   Type: `string` ([error](tdslroot-definitions-tprompt-properties-error.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-error.md "in2cloud#/definitions/TPrompt/properties/error")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPrompt/properties/error")
 
 ### error Type
 
-`string` ([error](tdslroot-definitions-tprompt-properties-error.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### error Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## message
 
-Prompt to play
+Value or value reference
 
 `message`
 
 *   is required
 
-*   Type: `string` ([message](tdslroot-definitions-tprompt-properties-message.md))
+*   Type: `string` ([TInput](tdslroot-definitions-tinput.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-message.md "in2cloud#/definitions/TPrompt/properties/message")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tinput.md "in2cloud#/definitions/TPrompt/properties/message")
 
 ### message Type
 
-`string` ([message](tdslroot-definitions-tprompt-properties-message.md))
+`string` ([TInput](tdslroot-definitions-tinput.md))
 
 ## next
 
-Next block to be executed after input will be provided
+Uniquely defines block
 
 `next`
 
 *   is required
 
-*   Type: `string` ([next](tdslroot-definitions-tprompt-properties-next.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-next.md "in2cloud#/definitions/TPrompt/properties/next")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPrompt/properties/next")
 
 ### next Type
 
-`string` ([next](tdslroot-definitions-tprompt-properties-next.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### next Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## timeout
 
-Block to be executed in case of no input provided
+Uniquely defines block
 
 `timeout`
 
 *   is required
 
-*   Type: `string` ([timeout](tdslroot-definitions-tprompt-properties-timeout.md))
+*   Type: `string` ([TBlockID](tdslroot-definitions-tblockid.md))
 
 *   cannot be null
 
-*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-timeout.md "in2cloud#/definitions/TPrompt/properties/timeout")
+*   defined in: [in2cloud DSL](tdslroot-definitions-tblockid.md "in2cloud#/definitions/TPrompt/properties/timeout")
 
 ### timeout Type
 
-`string` ([timeout](tdslroot-definitions-tprompt-properties-timeout.md))
+`string` ([TBlockID](tdslroot-definitions-tblockid.md))
+
+### timeout Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^[a-zA-Z0-9_]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Ba-zA-Z0-9\_%5D\*%24 "try regular expression with regexr.com")
 
 ## type
 

@@ -1,15 +1,15 @@
-# initial Schema
+# TInput Schema
 
 ```txt
-in2cloud#/definitions/TFlow/properties/initial
+in2cloud#/definitions/TPrompt/properties/message
 ```
 
-ID of initial block in this flow
+Value or value reference
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## initial Type
+## message Type
 
-`string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
+`string` ([TInput](tdslroot-definitions-tprompt-properties-tinput.md))
