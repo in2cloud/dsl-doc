@@ -18,7 +18,9 @@
 
 *   [TMenu](./tdslroot-definitions-tmenu.md "Prompt user to make a choice") – `in2cloud#/definitions/TMenu`
 
-*   [TPlay](./tdslroot-definitions-tplay.md) – `in2cloud#/definitions/TPlay`
+*   [TMenuOptions](./tdslroot-definitions-tmenuoptions.md "Mapping of option to a block id") – `in2cloud#/definitions/TMenuOptions`
+
+*   [TPlay](./tdslroot-definitions-tplay.md "Play message to a user") – `in2cloud#/definitions/TPlay`
 
 *   [TPrompt](./tdslroot-definitions-tprompt.md "Prompt user for input") – `in2cloud#/definitions/TPrompt`
 
@@ -30,7 +32,15 @@
 
 ### Arrays
 
+*   [exits](./tdslroot-definitions-tflow-properties-exits.md "List of exits points of this flow") – `in2cloud#/definitions/TFlow/properties/exits`
+
+*   [exits](./tdslroot-definitions-tflow-properties-exits.md "List of exits points of this flow") – `in2cloud#/definitions/TFlow/properties/exits`
+
 *   [flows](./tdslroot-properties-flows.md "Flows definition") – `in2cloud#/properties/flows`
+
+*   [parameters](./tdslroot-definitions-tflow-properties-parameters.md "List of parameters required for this flow to run") – `in2cloud#/definitions/TFlow/properties/parameters`
+
+*   [parameters](./tdslroot-definitions-tflow-properties-parameters.md "List of parameters required for this flow to run") – `in2cloud#/definitions/TFlow/properties/parameters`
 
 *   [provided](./tdslroot-properties-provided.md "List of @TProvided sub-flows") – `in2cloud#/properties/provided`
 

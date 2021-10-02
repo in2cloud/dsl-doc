@@ -113,9 +113,48 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TCall"}
 ```
 
-| Property      | Type     | Required | Nullable       | Defined by                                                                                                  |
-| :------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------- |
-| [type](#type) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-type.md "in2cloud#/definitions/TCall/properties/type") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                              |
+| :------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| [callError](#callerror)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-callerror.md "in2cloud#/definitions/TCall/properties/callError")   |
+| [collection](#collection) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-collection.md "in2cloud#/definitions/TCall/properties/collection") |
+| [type](#type)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-properties-type.md "in2cloud#/definitions/TCall/properties/type")             |
+| Additional Properties     | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tcall-additionalproperties.md "in2cloud#/definitions/TCall/additionalProperties")   |
+
+### callError
+
+Block to be executed in case of sub-flow call error
+
+`callError`
+
+*   is required
+
+*   Type: `string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tcall-properties-callerror.md "in2cloud#/definitions/TCall/properties/callError")
+
+#### callError Type
+
+`string` ([callError](tdslroot-definitions-tcall-properties-callerror.md))
+
+### collection
+
+Sub-flow id to be executed
+
+`collection`
+
+*   is required
+
+*   Type: `string` ([collection](tdslroot-definitions-tcall-properties-collection.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tcall-properties-collection.md "in2cloud#/definitions/TCall/properties/collection")
+
+#### collection Type
+
+`string` ([collection](tdslroot-definitions-tcall-properties-collection.md))
 
 ### type
 
@@ -142,6 +181,24 @@ Reference this group by using
 | Value     | Explanation |
 | :-------- | :---------- |
 | `"TCall"` |             |
+
+### Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tcall-additionalproperties.md "in2cloud#/definitions/TCall/additionalProperties")
+
+#### additionalProperties Type
+
+`string`
 
 ## Definitions group TDisconnect
 
@@ -189,11 +246,13 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TFlow"}
 ```
 
-| Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [blocks](#blocks)   | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblocks.md "in2cloud#/definitions/TFlow/properties/blocks")                   |
-| [id](#id)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-id.md "in2cloud#/definitions/TFlow/properties/id")           |
-| [initial](#initial) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                              |
+| :------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| [blocks](#blocks)         | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblocks.md "in2cloud#/definitions/TFlow/properties/blocks")                         |
+| [exits](#exits)           | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-exits.md "in2cloud#/definitions/TFlow/properties/exits")           |
+| [id](#id)                 | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-id.md "in2cloud#/definitions/TFlow/properties/id")                 |
+| [initial](#initial)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial")       |
+| [parameters](#parameters) | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-parameters.md "in2cloud#/definitions/TFlow/properties/parameters") |
 
 ### blocks
 
@@ -212,6 +271,24 @@ Map of flow blocks
 #### blocks Type
 
 `object` ([TBlocks](tdslroot-definitions-tblocks.md))
+
+### exits
+
+List of exits points of this flow
+
+`exits`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-exits.md "in2cloud#/definitions/TFlow/properties/exits")
+
+#### exits Type
+
+`string[]`
 
 ### id
 
@@ -249,6 +326,24 @@ ID of initial block in this flow
 
 `string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
 
+### parameters
+
+List of parameters required for this flow to run
+
+`parameters`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-parameters.md "in2cloud#/definitions/TFlow/properties/parameters")
+
+#### parameters Type
+
+`string[]`
+
 ## Definitions group TMenu
 
 Reference this group by using
@@ -259,8 +354,30 @@ Reference this group by using
 
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
 | :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
+| [error](#error)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-error.md "in2cloud#/definitions/TMenu/properties/error")     |
 | [message](#message) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-message.md "in2cloud#/definitions/TMenu/properties/message") |
+| [nomatch](#nomatch) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-nomatch.md "in2cloud#/definitions/TMenu/properties/nomatch") |
+| [options](#options) | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenuoptions.md "in2cloud#/definitions/TMenu/properties/options")             |
+| [timeout](#timeout) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-timeout.md "in2cloud#/definitions/TMenu/properties/timeout") |
 | [type](#type-2)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenu-properties-type.md "in2cloud#/definitions/TMenu/properties/type")       |
+
+### error
+
+Block to be executed in case of error
+
+`error`
+
+*   is required
+
+*   Type: `string` ([error](tdslroot-definitions-tmenu-properties-error.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-error.md "in2cloud#/definitions/TMenu/properties/error")
+
+#### error Type
+
+`string` ([error](tdslroot-definitions-tmenu-properties-error.md))
 
 ### message
 
@@ -279,6 +396,60 @@ Prompt to play to offer choices
 #### message Type
 
 `string` ([message](tdslroot-definitions-tmenu-properties-message.md))
+
+### nomatch
+
+Block to be executed in case of mismatching option
+
+`nomatch`
+
+*   is required
+
+*   Type: `string` ([nomatch](tdslroot-definitions-tmenu-properties-nomatch.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-nomatch.md "in2cloud#/definitions/TMenu/properties/nomatch")
+
+#### nomatch Type
+
+`string` ([nomatch](tdslroot-definitions-tmenu-properties-nomatch.md))
+
+### options
+
+Mapping of option to a block id
+
+`options`
+
+*   is required
+
+*   Type: `object` ([TMenuOptions](tdslroot-definitions-tmenuoptions.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenuoptions.md "in2cloud#/definitions/TMenu/properties/options")
+
+#### options Type
+
+`object` ([TMenuOptions](tdslroot-definitions-tmenuoptions.md))
+
+### timeout
+
+Block to be executed in case of no option provided
+
+`timeout`
+
+*   is required
+
+*   Type: `string` ([timeout](tdslroot-definitions-tmenu-properties-timeout.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenu-properties-timeout.md "in2cloud#/definitions/TMenu/properties/timeout")
+
+#### timeout Type
+
+`string` ([timeout](tdslroot-definitions-tmenu-properties-timeout.md))
 
 ### type
 
@@ -305,6 +476,36 @@ Prompt to play to offer choices
 | Value     | Explanation |
 | :-------- | :---------- |
 | `"TMenu"` |             |
+
+## Definitions group TMenuOptions
+
+Reference this group by using
+
+```json
+{"$ref":"in2cloud#/definitions/TMenuOptions"}
+```
+
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                          |
+| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Additional Properties | `string` | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tmenuoptions-additionalproperties.md "in2cloud#/definitions/TMenuOptions/additionalProperties") |
+
+### Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tmenuoptions-additionalproperties.md "in2cloud#/definitions/TMenuOptions/additionalProperties")
+
+#### additionalProperties Type
+
+`string`
 
 ## Definitions group TPlay
 
@@ -340,7 +541,7 @@ Prompt to play
 
 ### next
 
-Next block to be executed after message will be played.
+Next block to be executed after message will be played
 
 `next`
 
@@ -390,9 +591,104 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TPrompt"}
 ```
 
-| Property        | Type     | Required | Nullable       | Defined by                                                                                                      |
-| :-------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
-| [type](#type-4) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-type.md "in2cloud#/definitions/TPrompt/properties/type") |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                    |
+| :-------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| [destination](#destination) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-destination.md "in2cloud#/definitions/TPrompt/properties/destination") |
+| [error](#error-1)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-error.md "in2cloud#/definitions/TPrompt/properties/error")             |
+| [message](#message-2)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-message.md "in2cloud#/definitions/TPrompt/properties/message")         |
+| [next](#next-1)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-next.md "in2cloud#/definitions/TPrompt/properties/next")               |
+| [timeout](#timeout-1)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-timeout.md "in2cloud#/definitions/TPrompt/properties/timeout")         |
+| [type](#type-4)             | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tprompt-properties-type.md "in2cloud#/definitions/TPrompt/properties/type")               |
+
+### destination
+
+Variable name where user input will be stored
+
+`destination`
+
+*   is required
+
+*   Type: `string` ([destination](tdslroot-definitions-tprompt-properties-destination.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-destination.md "in2cloud#/definitions/TPrompt/properties/destination")
+
+#### destination Type
+
+`string` ([destination](tdslroot-definitions-tprompt-properties-destination.md))
+
+### error
+
+Block to be executed in case of error
+
+`error`
+
+*   is required
+
+*   Type: `string` ([error](tdslroot-definitions-tprompt-properties-error.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-error.md "in2cloud#/definitions/TPrompt/properties/error")
+
+#### error Type
+
+`string` ([error](tdslroot-definitions-tprompt-properties-error.md))
+
+### message
+
+Prompt to play
+
+`message`
+
+*   is required
+
+*   Type: `string` ([message](tdslroot-definitions-tprompt-properties-message.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-message.md "in2cloud#/definitions/TPrompt/properties/message")
+
+#### message Type
+
+`string` ([message](tdslroot-definitions-tprompt-properties-message.md))
+
+### next
+
+Next block to be executed after input will be provided
+
+`next`
+
+*   is required
+
+*   Type: `string` ([next](tdslroot-definitions-tprompt-properties-next.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-next.md "in2cloud#/definitions/TPrompt/properties/next")
+
+#### next Type
+
+`string` ([next](tdslroot-definitions-tprompt-properties-next.md))
+
+### timeout
+
+Block to be executed in case of no input provided
+
+`timeout`
+
+*   is required
+
+*   Type: `string` ([timeout](tdslroot-definitions-tprompt-properties-timeout.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tprompt-properties-timeout.md "in2cloud#/definitions/TPrompt/properties/timeout")
+
+#### timeout Type
+
+`string` ([timeout](tdslroot-definitions-tprompt-properties-timeout.md))
 
 ### type
 
@@ -479,7 +775,26 @@ Reference this group by using
 
 | Property        | Type     | Required | Nullable       | Defined by                                                                                                      |
 | :-------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
+| [to](#to)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-treturn-properties-to.md "in2cloud#/definitions/TReturn/properties/to")     |
 | [type](#type-5) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-treturn-properties-type.md "in2cloud#/definitions/TReturn/properties/type") |
+
+### to
+
+Return to a named exit, passed via "exits" parameter
+
+`to`
+
+*   is required
+
+*   Type: `string` ([to](tdslroot-definitions-treturn-properties-to.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-treturn-properties-to.md "in2cloud#/definitions/TReturn/properties/to")
+
+#### to Type
+
+`string` ([to](tdslroot-definitions-treturn-properties-to.md))
 
 ### type
 
@@ -515,9 +830,66 @@ Reference this group by using
 {"$ref":"in2cloud#/definitions/TToTeam"}
 ```
 
-| Property        | Type     | Required | Nullable       | Defined by                                                                                                      |
-| :-------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
-| [type](#type-6) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type") |
+| Property          | Type     | Required | Nullable       | Defined by                                                                                                        |
+| :---------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
+| [busy](#busy)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")   |
+| [error](#error-2) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error") |
+| [team](#team)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")   |
+| [type](#type-6)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type")   |
+
+### busy
+
+Block to be executed in case all team members are busy
+
+`busy`
+
+*   is required
+
+*   Type: `string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")
+
+#### busy Type
+
+`string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+
+### error
+
+Block to be executed in case of transfer error
+
+`error`
+
+*   is required
+
+*   Type: `string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error")
+
+#### error Type
+
+`string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+
+### team
+
+Team id, user will be transfered to
+
+`team`
+
+*   is required
+
+*   Type: `string` ([team](tdslroot-definitions-ttoteam-properties-team.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")
+
+#### team Type
+
+`string` ([team](tdslroot-definitions-ttoteam-properties-team.md))
 
 ### type
 

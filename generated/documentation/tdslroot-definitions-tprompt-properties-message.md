@@ -1,15 +1,15 @@
-# next Schema
+# message Schema
 
 ```txt
-in2cloud#/definitions/TPlay/properties/next
+in2cloud#/definitions/TPrompt/properties/message
 ```
 
-Next block to be executed after message will be played
+Prompt to play
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## next Type
+## message Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string` ([message](tdslroot-definitions-tprompt-properties-message.md))

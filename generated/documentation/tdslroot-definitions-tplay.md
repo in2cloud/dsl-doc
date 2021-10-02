@@ -4,7 +4,7 @@
 in2cloud#/definitions/TBlocks/additionalProperties/anyOf/0
 ```
 
-
+Play message to a user
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ Prompt to play
 
 ## next
 
-Next block to be executed after message will be played.
+Next block to be executed after message will be played
 
 `next`
 

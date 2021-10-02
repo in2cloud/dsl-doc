@@ -16,9 +16,66 @@ Transfer user to a specified team
 
 # 5 Properties
 
-| Property      | Type     | Required | Nullable       | Defined by                                                                                                      |
-| :------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
-| [type](#type) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type") |
+| Property        | Type     | Required | Nullable       | Defined by                                                                                                        |
+| :-------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
+| [busy](#busy)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")   |
+| [error](#error) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error") |
+| [team](#team)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")   |
+| [type](#type)   | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-ttoteam-properties-type.md "in2cloud#/definitions/TToTeam/properties/type")   |
+
+## busy
+
+Block to be executed in case all team members are busy
+
+`busy`
+
+*   is required
+
+*   Type: `string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-busy.md "in2cloud#/definitions/TToTeam/properties/busy")
+
+### busy Type
+
+`string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))
+
+## error
+
+Block to be executed in case of transfer error
+
+`error`
+
+*   is required
+
+*   Type: `string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-error.md "in2cloud#/definitions/TToTeam/properties/error")
+
+### error Type
+
+`string` ([error](tdslroot-definitions-ttoteam-properties-error.md))
+
+## team
+
+Team id, user will be transfered to
+
+`team`
+
+*   is required
+
+*   Type: `string` ([team](tdslroot-definitions-ttoteam-properties-team.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-ttoteam-properties-team.md "in2cloud#/definitions/TToTeam/properties/team")
+
+### team Type
+
+`string` ([team](tdslroot-definitions-ttoteam-properties-team.md))
 
 ## type
 

@@ -18,7 +18,26 @@ Return from subflow to a parent flow
 
 | Property      | Type     | Required | Nullable       | Defined by                                                                                                      |
 | :------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------- |
+| [to](#to)     | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-treturn-properties-to.md "in2cloud#/definitions/TReturn/properties/to")     |
 | [type](#type) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-treturn-properties-type.md "in2cloud#/definitions/TReturn/properties/type") |
+
+## to
+
+Return to a named exit, passed via "exits" parameter
+
+`to`
+
+*   is required
+
+*   Type: `string` ([to](tdslroot-definitions-treturn-properties-to.md))
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-treturn-properties-to.md "in2cloud#/definitions/TReturn/properties/to")
+
+### to Type
+
+`string` ([to](tdslroot-definitions-treturn-properties-to.md))
 
 ## type
 

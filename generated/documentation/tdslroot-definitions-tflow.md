@@ -16,11 +16,13 @@ Flow definition
 
 # items Properties
 
-| Property            | Type     | Required | Nullable       | Defined by                                                                                                        |
-| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [blocks](#blocks)   | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblocks.md "in2cloud#/definitions/TFlow/properties/blocks")                   |
-| [id](#id)           | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-id.md "in2cloud#/definitions/TFlow/properties/id")           |
-| [initial](#initial) | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                              |
+| :------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| [blocks](#blocks)         | `object` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tblocks.md "in2cloud#/definitions/TFlow/properties/blocks")                         |
+| [exits](#exits)           | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-exits.md "in2cloud#/definitions/TFlow/properties/exits")           |
+| [id](#id)                 | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-id.md "in2cloud#/definitions/TFlow/properties/id")                 |
+| [initial](#initial)       | `string` | Required | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-initial.md "in2cloud#/definitions/TFlow/properties/initial")       |
+| [parameters](#parameters) | `array`  | Optional | cannot be null | [in2cloud DSL](tdslroot-definitions-tflow-properties-parameters.md "in2cloud#/definitions/TFlow/properties/parameters") |
 
 ## blocks
 
@@ -39,6 +41,24 @@ Map of flow blocks
 ### blocks Type
 
 `object` ([TBlocks](tdslroot-definitions-tblocks.md))
+
+## exits
+
+List of exits points of this flow
+
+`exits`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-exits.md "in2cloud#/definitions/TFlow/properties/exits")
+
+### exits Type
+
+`string[]`
 
 ## id
 
@@ -75,3 +95,21 @@ ID of initial block in this flow
 ### initial Type
 
 `string` ([initial](tdslroot-definitions-tflow-properties-initial.md))
+
+## parameters
+
+List of parameters required for this flow to run
+
+`parameters`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [in2cloud DSL](tdslroot-definitions-tflow-properties-parameters.md "in2cloud#/definitions/TFlow/properties/parameters")
+
+### parameters Type
+
+`string[]`

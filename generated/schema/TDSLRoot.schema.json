@@ -34,9 +34,21 @@
             "type": "object"
         },
         "TCall": {
-            "additionalProperties": false,
+            "additionalProperties": {
+                "type": "string"
+            },
             "description": "Invoke other sub-flow defined in this DSL file",
             "properties": {
+                "callError": {
+                    "description": "Block to be executed in case of sub-flow call error",
+                    "title": "callError",
+                    "type": "string"
+                },
+                "collection": {
+                    "description": "Sub-flow id to be executed",
+                    "title": "collection",
+                    "type": "string"
+                },
                 "type": {
                     "enum": [
                         "TCall"
@@ -46,6 +58,8 @@
                 }
             },
             "required": [
+                "callError",
+                "collection",
                 "type"
             ],
             "title": "TCall",
@@ -78,6 +92,14 @@
                     "description": "Blocks defining flow steps",
                     "title": "blocks"
                 },
+                "exits": {
+                    "description": "List of exits points of this flow",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "exits",
+                    "type": "array"
+                },
                 "id": {
                     "description": "Flow unique identifier",
                     "title": "id",
@@ -87,6 +109,14 @@
                     "description": "ID of initial block in this flow",
                     "title": "initial",
                     "type": "string"
+                },
+                "parameters": {
+                    "description": "List of parameters required for this flow to run",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "parameters",
+                    "type": "array"
                 }
             },
             "required": [
@@ -101,9 +131,29 @@
             "additionalProperties": false,
             "description": "Prompt user to make a choice",
             "properties": {
+                "error": {
+                    "description": "Block to be executed in case of error",
+                    "title": "error",
+                    "type": "string"
+                },
                 "message": {
                     "description": "Prompt to play to offer choices",
                     "title": "message",
+                    "type": "string"
+                },
+                "nomatch": {
+                    "description": "Block to be executed in case of mismatching option",
+                    "title": "nomatch",
+                    "type": "string"
+                },
+                "options": {
+                    "$ref": "in2cloud#/definitions/TMenuOptions",
+                    "description": "Menu options configuration",
+                    "title": "options"
+                },
+                "timeout": {
+                    "description": "Block to be executed in case of no option provided",
+                    "title": "timeout",
                     "type": "string"
                 },
                 "type": {
@@ -115,14 +165,27 @@
                 }
             },
             "required": [
+                "error",
                 "message",
+                "nomatch",
+                "options",
+                "timeout",
                 "type"
             ],
             "title": "TMenu",
             "type": "object"
         },
+        "TMenuOptions": {
+            "additionalProperties": {
+                "type": "string"
+            },
+            "description": "Mapping of option to a block id",
+            "title": "TMenuOptions",
+            "type": "object"
+        },
         "TPlay": {
             "additionalProperties": false,
+            "description": "Play message to a user",
             "properties": {
                 "message": {
                     "description": "Prompt to play",
@@ -130,7 +193,7 @@
                     "type": "string"
                 },
                 "next": {
-                    "description": "Next block to be executed after message will be played.",
+                    "description": "Next block to be executed after message will be played",
                     "title": "next",
                     "type": "string"
                 },
@@ -154,6 +217,31 @@
             "additionalProperties": false,
             "description": "Prompt user for input",
             "properties": {
+                "destination": {
+                    "description": "Variable name where user input will be stored",
+                    "title": "destination",
+                    "type": "string"
+                },
+                "error": {
+                    "description": "Block to be executed in case of error",
+                    "title": "error",
+                    "type": "string"
+                },
+                "message": {
+                    "description": "Prompt to play",
+                    "title": "message",
+                    "type": "string"
+                },
+                "next": {
+                    "description": "Next block to be executed after input will be provided",
+                    "title": "next",
+                    "type": "string"
+                },
+                "timeout": {
+                    "description": "Block to be executed in case of no input provided",
+                    "title": "timeout",
+                    "type": "string"
+                },
                 "type": {
                     "enum": [
                         "TPrompt"
@@ -163,6 +251,11 @@
                 }
             },
             "required": [
+                "destination",
+                "error",
+                "message",
+                "next",
+                "timeout",
                 "type"
             ],
             "title": "TPrompt",
@@ -194,6 +287,11 @@
             "additionalProperties": false,
             "description": "Return from subflow to a parent flow",
             "properties": {
+                "to": {
+                    "description": "Return to a named exit, passed via \"exits\" parameter",
+                    "title": "to",
+                    "type": "string"
+                },
                 "type": {
                     "enum": [
                         "TReturn"
@@ -203,6 +301,7 @@
                 }
             },
             "required": [
+                "to",
                 "type"
             ],
             "title": "TReturn",
@@ -212,6 +311,21 @@
             "additionalProperties": false,
             "description": "Transfer user to a specified team",
             "properties": {
+                "busy": {
+                    "description": "Block to be executed in case all team members are busy",
+                    "title": "busy",
+                    "type": "string"
+                },
+                "error": {
+                    "description": "Block to be executed in case of transfer error",
+                    "title": "error",
+                    "type": "string"
+                },
+                "team": {
+                    "description": "Team id, user will be transfered to",
+                    "title": "team",
+                    "type": "string"
+                },
                 "type": {
                     "enum": [
                         "TToTeam"
@@ -221,6 +335,9 @@
                 }
             },
             "required": [
+                "busy",
+                "error",
+                "team",
                 "type"
             ],
             "title": "TToTeam",

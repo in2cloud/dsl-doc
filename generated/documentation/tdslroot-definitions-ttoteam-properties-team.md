@@ -1,15 +1,15 @@
-# next Schema
+# team Schema
 
 ```txt
-in2cloud#/definitions/TPlay/properties/next
+in2cloud#/definitions/TToTeam/properties/team
 ```
 
-Next block to be executed after message will be played
+Team id, user will be transfered to
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## next Type
+## team Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string` ([team](tdslroot-definitions-ttoteam-properties-team.md))

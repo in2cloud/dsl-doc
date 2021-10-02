@@ -1,15 +1,15 @@
-# next Schema
+# Untitled string in in2cloud DSL Schema
 
 ```txt
-in2cloud#/definitions/TPlay/properties/next
+in2cloud#/definitions/TFlow/properties/parameters/items
 ```
 
-Next block to be executed after message will be played
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## next Type
+## items Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string`

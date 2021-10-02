@@ -1,15 +1,15 @@
-# next Schema
+# busy Schema
 
 ```txt
-in2cloud#/definitions/TPlay/properties/next
+in2cloud#/definitions/TToTeam/properties/busy
 ```
 
-Next block to be executed after message will be played
+Block to be executed in case all team members are busy
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [TDSLRoot.schema.json*](../schema/TDSLRoot.schema.json "open original schema") |
 
-## next Type
+## busy Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string` ([busy](tdslroot-definitions-ttoteam-properties-busy.md))

@@ -1,10 +1,10 @@
 # next Schema
 
 ```txt
-in2cloud#/definitions/TPlay/properties/next
+in2cloud#/definitions/TPrompt/properties/next
 ```
 
-Next block to be executed after message will be played
+Next block to be executed after input will be provided
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
@@ -12,4 +12,4 @@ Next block to be executed after message will be played
 
 ## next Type
 
-`string` ([next](tdslroot-definitions-tplay-properties-next.md))
+`string` ([next](tdslroot-definitions-tprompt-properties-next.md))
