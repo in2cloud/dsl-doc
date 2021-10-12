@@ -4,7 +4,7 @@
 in2cloud#/definitions/TProvided/properties/id
 ```
 
-Uniquely defines block
+Uniquely identifies a block
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |

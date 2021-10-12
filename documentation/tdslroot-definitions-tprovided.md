@@ -23,7 +23,7 @@ Sub-flow avaliable to be invoked with TCall, but not defined in this DSL
 
 ## id
 
-Uniquely defines block
+Uniquely identifies a block
 
 `id`
 

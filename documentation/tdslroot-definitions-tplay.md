@@ -42,7 +42,7 @@ Value or value reference
 
 ## next
 
-Uniquely defines block
+Uniquely identifies a block
 
 `next`
 

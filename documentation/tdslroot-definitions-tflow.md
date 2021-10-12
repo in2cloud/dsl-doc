@@ -80,7 +80,7 @@ Flow unique identifier
 
 ## initial
 
-Uniquely defines block
+Uniquely identifies a block
 
 `initial`
 

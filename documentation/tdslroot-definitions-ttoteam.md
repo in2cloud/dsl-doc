@@ -25,7 +25,7 @@ Transfer user to a specified team
 
 ## busy
 
-Uniquely defines block
+Uniquely identifies a block
 
 `busy`
 
@@ -55,7 +55,7 @@ Uniquely defines block
 
 ## error
 
-Uniquely defines block
+Uniquely identifies a block
 
 `error`
 

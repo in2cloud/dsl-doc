@@ -27,7 +27,7 @@ Prompt user to make a choice
 
 ## error
 
-Uniquely defines block
+Uniquely identifies a block
 
 `error`
 
@@ -75,7 +75,7 @@ Prompt to play to offer choices
 
 ## nomatch
 
-Uniquely defines block
+Uniquely identifies a block
 
 `nomatch`
 
@@ -123,7 +123,7 @@ Mapping of option to a block id
 
 ## timeout
 
-Uniquely defines block
+Uniquely identifies a block
 
 `timeout`
 

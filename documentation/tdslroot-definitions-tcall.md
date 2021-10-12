@@ -25,7 +25,7 @@ Invoke other sub-flow defined in this DSL file
 
 ## callError
 
-Uniquely defines block
+Uniquely identifies a block
 
 `callError`
 

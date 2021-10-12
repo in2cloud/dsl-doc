@@ -57,7 +57,7 @@ Variable definition
 
 ## error
 
-Uniquely defines block
+Uniquely identifies a block
 
 `error`
 
@@ -105,7 +105,7 @@ Value or value reference
 
 ## next
 
-Uniquely defines block
+Uniquely identifies a block
 
 `next`
 
@@ -135,7 +135,7 @@ Uniquely defines block
 
 ## timeout
 
-Uniquely defines block
+Uniquely identifies a block
 
 `timeout`
 

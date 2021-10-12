@@ -133,7 +133,7 @@ Reference this group by using
 
 ### callError
 
-Uniquely defines block
+Uniquely identifies a block
 
 `callError`
 
@@ -333,7 +333,7 @@ Flow unique identifier
 
 ### initial
 
-Uniquely defines block
+Uniquely identifies a block
 
 `initial`
 
@@ -409,7 +409,7 @@ Reference this group by using
 
 ### error
 
-Uniquely defines block
+Uniquely identifies a block
 
 `error`
 
@@ -457,7 +457,7 @@ Prompt to play to offer choices
 
 ### nomatch
 
-Uniquely defines block
+Uniquely identifies a block
 
 `nomatch`
 
@@ -505,7 +505,7 @@ Mapping of option to a block id
 
 ### timeout
 
-Uniquely defines block
+Uniquely identifies a block
 
 `timeout`
 
@@ -634,7 +634,7 @@ Value or value reference
 
 ### next
 
-Uniquely defines block
+Uniquely identifies a block
 
 `next`
 
@@ -737,7 +737,7 @@ Variable definition
 
 ### error
 
-Uniquely defines block
+Uniquely identifies a block
 
 `error`
 
@@ -785,7 +785,7 @@ Value or value reference
 
 ### next
 
-Uniquely defines block
+Uniquely identifies a block
 
 `next`
 
@@ -815,7 +815,7 @@ Uniquely defines block
 
 ### timeout
 
-Uniquely defines block
+Uniquely identifies a block
 
 `timeout`
 
@@ -884,7 +884,7 @@ Reference this group by using
 
 ### id
 
-Uniquely defines block
+Uniquely identifies a block
 
 `id`
 
@@ -1004,7 +1004,7 @@ Reference this group by using
 
 ### busy
 
-Uniquely defines block
+Uniquely identifies a block
 
 `busy`
 
@@ -1034,7 +1034,7 @@ Uniquely defines block
 
 ### error
 
-Uniquely defines block
+Uniquely identifies a block
 
 `error`
 

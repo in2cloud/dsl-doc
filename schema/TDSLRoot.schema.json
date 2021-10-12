@@ -4,7 +4,7 @@
     "additionalProperties": false,
     "definitions": {
         "TBlockID": {
-            "description": "Uniquely defines block",
+            "description": "Uniquely identifies a block",
             "minLength": 1,
             "pattern": "^[a-zA-Z0-9_]*$",
             "title": "TBlockID",
