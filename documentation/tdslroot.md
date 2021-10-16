@@ -19,7 +19,7 @@ in2cloud DSL root object
 | Property              | Type    | Required | Nullable       | Defined by                                                                      |
 | :-------------------- | :------ | :------- | :------------- | :------------------------------------------------------------------------------ |
 | [flows](#flows)       | `array` | Required | cannot be null | [in2cloud DSL](tdslroot-properties-flows.md "in2cloud#/properties/flows")       |
-| [provided](#provided) | `array` | Required | cannot be null | [in2cloud DSL](tdslroot-properties-provided.md "in2cloud#/properties/provided") |
+| [provided](#provided) | `array` | Optional | cannot be null | [in2cloud DSL](tdslroot-properties-provided.md "in2cloud#/properties/provided") |
 
 ## flows
 
@@ -45,7 +45,7 @@ List of @TProvided sub-flows
 
 `provided`
 
-*   is required
+*   is optional
 
 *   Type: `object[]` ([TProvided](tdslroot-definitions-tprovided.md))
 

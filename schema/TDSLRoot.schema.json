@@ -383,8 +383,7 @@
         }
     },
     "required": [
-        "flows",
-        "provided"
+        "flows"
     ],
     "title": "in2cloud DSL",
     "type": "object"
